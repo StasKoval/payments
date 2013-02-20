@@ -16,7 +16,7 @@
             <ul>
               <% @payments_by_date[date].each do |payment| %>
                   <li>
-                    <%= link_to payment.product, payment, "data-reveal-id" => "myModal"+payment.id.to_s, :class =>"reveral" %>
+                    <%= link_to "#{payment.recipient.name} #{payment.sum}", payment, "data-reveal-id" => "myModal"+payment.id.to_s, :class =>"reveral" %>
                   </li>
 	              <%= javascript_tag do %>
 		          window.payment_id = <%= payment.id %>

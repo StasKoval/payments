@@ -29,6 +29,7 @@
 	     <%= f.label :"Периодичность" %><br />
 	     <%= collection_select(:payment, :period_id, Period.all, :id, :title ) %>
 	   </div>
+
 	 </div>
 
 
@@ -42,8 +43,17 @@
           <%= f.text_field :sum %><br />
           <%= f.label :comment %><br />
           <%= f.text_field :comment %><br />
-          <%= f.label "Оплачено?" %>
-          <%= f.check_box :status %>
+          <ul>
+           <li>
+             <%= f.label "Оплачено?" %>
+             <%= f.check_box :status %>
+           </li>
+            <li>
+              <%= f.label "Безнал?" %>
+              <%= f.check_box :beznal %>
+            </li>
+          </ul>
+
         </div>
 
       </div>

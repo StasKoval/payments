@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130220135025) do
+ActiveRecord::Schema.define(:version => 20130220141748) do
 
   create_table "payers", :force => true do |t|
     t.string   "name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20130220135025) do
     t.string   "comment"
     t.integer  "periodic"
     t.integer  "period_id"
-    t.boolean  "beznal"
+    t.boolean  "cach"
   end
 
   add_index "payments", ["period_id"], :name => "index_payments_on_period_id"

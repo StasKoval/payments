@@ -1,5 +1,5 @@
 class Payment < ActiveRecord::Base
-  attr_accessible :delay, :payer_id, :payment_date, :product, :recipient_id, :status, :sum, :comment, :period_id, :beznal
+  attr_accessible :delay, :payer_id, :payment_date, :product, :recipient_id, :status, :sum, :comment, :period_id, :cach
 
   validates :payment_date,  :product, :sum, :recipient_id, :presence => true
 

@@ -1,0 +1,37 @@
+<div  class="ten columns">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Плательщик:</b>
+  <%= @payment.payer.name %>
+</p>
+
+<p>
+  <b>Recipient:</b>
+  <%= @payment.recipient.name %>
+</p>
+
+<p>
+  <b>Payment date:</b>
+  <%= @payment.payment_date %>
+</p>
+
+<p>
+  <b>Периодичность:</b>
+  <%= @payment.period.title %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%= @payment.product %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @payment.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  payer_id: 1
+  recipient_id: 1
+  payment_date: 2013-02-14
+  delay: 1
+  product: MyText
+  status: false
+
+two:
+  payer_id: 1
+  recipient_id: 1
+  payment_date: 2013-02-14
+  delay: 1
+  product: MyText
+  status: false

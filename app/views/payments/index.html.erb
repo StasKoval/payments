@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="twelve columns">
+    <h2 id="month">
+      <%= link_to "<", date:@date.prev_month %>
+      <%= @date.strftime("%B %Y") %>
+
+      <%= link_to ">", date:@date.next_month %>
+    </h2>
+  </div>
+  <div id="payments" class="twelve columns">
+
+
+    <%= calendar @date do |date| %>
+        <%= date.day %>
+        <% if @payments_by_date[date] %>
+            <ul>
+              <% @payments_by_date[date].each do |payment| %>
+                  <li>
+                    <%= link_to payment.product, payment, "data-reveal-id" => "myModal"+payment.id.to_s, :class =>"reveral" %>
+                  </li>
+	              <%= javascript_tag do %>
+		          window.payment_id = <%= payment.id %>
+                  <% end %>
+                  <div  class="reveal-modal medium"  id="myModal<%= payment.id %>" >
+                    <%=render :partial => "one", :locals => {:payment=>payment} %>
+                  </div>
+
+            <% end %>
+            </ul>
+
+        <% end %>
+    <% end %>
+  </div>
+
+  <div id="payments" class="six columns">
+    <% @date_next = @date.next_month %>
+    <h2><%= @date_next.strftime("%B %Y") %></h2>
+    <%= calendar @date_next do |date| %>
+        <%= date.day %>
+        <% if @payments_by_date[date] %>
+            <ul>
+              <% @payments_by_date[date].each do |payment| %>
+                  <li>
+                    <%= link_to payment.product, payment, "data-reveal-id" => "myModal"+payment.id.to_s, :class =>"reveral" %>
+                  </li>
+                  <%= javascript_tag do %>
+                      window.payment_id = <%= payment.id %>
+                  <% end %>
+                  <div  class="reveal-modal medium"  id="myModal<%= payment.id %>" >
+                    <%=render :partial => "one", :locals => {:payment=>payment} %>
+                  </div>
+
+              <% end %>
+            </ul>
+
+        <% end %>
+    <% end %>
+
+  </div>
+  <div id="payments" class="six columns">
+    <% @date_prev = @date.prev_month %>
+    <h2><%= @date_prev.strftime("%B %Y") %></h2>
+    <%= calendar @date_prev do |date| %>
+        <%= date.day %>
+        <% if @payments_by_date[date] %>
+            <ul>
+              <% @payments_by_date[date].each do |payment| %>
+                  <li>
+                    <%= link_to payment.product, payment, "data-reveal-id" => "myModal"+payment.id.to_s, :class =>"reveral" %>
+                  </li>
+                  <%= javascript_tag do %>
+                      window.payment_id = <%= payment.id %>
+                  <% end %>
+                  <div  class="reveal-modal medium"  id="myModal<%= payment.id %>" >
+                    <%=render :partial => "one", :locals => {:payment=>payment} %>
+                  </div>
+
+              <% end %>
+            </ul>
+
+        <% end %>
+    <% end %>
+  </div>
+
+ </div>

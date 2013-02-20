@@ -1,0 +1,36 @@
+<div class="six columns">
+
+<p>
+  <b>Плательщик:</b>
+  <%= payment.payer.name %>
+</p>
+
+<p>
+  <b>Получатель:</b>
+  <%= payment.recipient.name %>
+</p>
+
+<p>
+  <b>Дата оплаты:</b>
+  <%= payment.payment_date %>
+</p>
+
+<p>
+  <b>Отсрочка (дней):</b>
+  <%= payment.delay %>
+</p>
+
+<p>
+  <b>Товар:</b>
+  <%= payment.product %>
+</p>
+
+<p>
+  <b>Состояние:</b>
+  <%= payment.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_path(payment) %> |
+<%= link_to 'Back', payments_path %>
+</div>

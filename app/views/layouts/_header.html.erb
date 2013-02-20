@@ -1,0 +1,22 @@
+<div class="row">
+<div class="twelve columns">
+  <nav class="top-bar">
+    <ul>
+      <li><%= link_to "Календарь", payments_path  %></li>
+    <li>
+      <%= link_to 'Создать платеж', new_payment_path, :id=>"new_payment_create", "data-reveal-id" => "new_payment" %>
+    </li>
+    <li>
+        <%= link_to 'Добавить получателя',new_recipient_path, :id=>"new_recipient_create", "data-reveal-id" => "new_recipient" %>
+    </li>
+   </ul>
+  </nav>
+</div>
+</div>
+
+<div  class="reveal-modal expand"  id="new_payment" >
+  <%=render :partial => "payments/form", :locals => {:payment=>Payment.new} %>
+</div>
+<div  class="reveal-modal expand"  id="new_recipient" >
+  <%=render :partial => "recipients/form", :locals => {:recipient=>Recipient.new} %>
+</div>

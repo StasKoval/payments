@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="six columns end">
+    <h1>New payment</h1>
+
+    <%=render :partial => "form", :locals => {:payment=>@payment} %>
+
+  </div>
+  <div class="six columns end">
+    <div class="six-up columns centered">
+      <p><%= link_to 'Show', @payment %>|<%= link_to 'Back', payments_path %></p>
+    </div>
+  </div>
+
+</div>

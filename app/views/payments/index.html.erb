@@ -15,9 +15,11 @@
         <% if @payments_by_date[date] %>
             <ul>
               <% @payments_by_date[date].each do |payment| %>
-                  <li>
+                  <%= content_tag :li do %>
+                    <%= content_tag(:span, :class=>'has-tip tip-top', "data-width"=>'140', "title"=>"#{payment.recipient.name} #{payment.sum}") do %>
                     <%= link_to "#{payment.recipient.name} #{payment.sum}", payment, "data-reveal-id" => "myModal"+payment.id.to_s, :class =>"reveral" %>
-                  </li>
+                    <% end %>
+                  <% end %>
 	              <%= javascript_tag do %>
 		          window.payment_id = <%= payment.id %>
                   <% end %>

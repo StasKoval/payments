@@ -45,3 +45,5 @@ group :test, :development do #в группу для разработки и т�
 	gem 'binding_of_caller'
 	gem 'meta_request'
 end
+gem 'bcrypt-ruby'
+gem 'omniauth-identity'

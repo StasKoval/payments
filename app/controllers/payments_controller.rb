@@ -1,16 +1,22 @@
 class PaymentsController < ApplicationController
-	respond_to :html, :json, :js
+  #include SessionsHelper
+  respond_to :html, :json, :js
 
 
 	def index
-    @payments = Payment.all
 
+    if params[:query]
+      @payments = Payment.where('cach=?', params[:query])
+    else
+      @payments = Payment.all
+    end
     @payments_by_date = @payments.group_by(&:payment_date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 
     respond_with(@payments)
 
   end
+
 
   # GET /payments/1
   # GET /payments/1.json

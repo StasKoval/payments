@@ -6,20 +6,23 @@ class PaymentsController < ApplicationController
 	def index
 
     if params[:query]
-      @payments = Payment.where('cach=?', params[:query])
+      @items = Item.where('cach=?', params[:query])
     else
-      @payments = Payment.all
+      @items = Item.all
     end
-    @payments_by_date = @payments.group_by(&:payment_date)
+    #@periodic = []
+    #@payments.each do |payment|
+
+    #end
+
+    @items_by_date = @items.group_by(&:date )
+    #@payments_per_week = @payments.period.where(:value=>2)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 
-    respond_with(@payments)
+    respond_with(@items)
 
   end
 
-
-  # GET /payments/1
-  # GET /payments/1.json
   def show
     @payment = Payment.find(params[:id])
 
@@ -42,17 +45,40 @@ class PaymentsController < ApplicationController
   # POST /payments
   # POST /payments.json
   def create
-    @payment = Payment.new(params[:payment])
+	  @payment = Payment.new(params[:payment])
+	  period = params[:payment][:period]
 
-    respond_to do |format|
-      if @payment.save
-        format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
-        format.json { render json: @payment, status: :created, location: @payment }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @payment.errors, status: :unprocessable_entity }
-      end
-    end
+	  respond_to do |format|
+		  if @payment.save
+			  if @payment.period.present?
+				  i = 0
+				  @payment.count ||= 1
+				  while @payment.count>i do
+					  #periods = Item.new(:date=>Date.today + i.month, :payment_id=>@payment.id)
+					  if @payment.period.to_s == "month"
+						  date_to = i.month
+					  end
+					  if @payment.period.to_s == "year"
+						  date_to = i.year
+					  end
+					  if @payment.period.to_s == "day"
+						  date_to = i.day
+					  end
+
+					  @payment.items.create(:date=>@payment.payment_date + date_to, :cach => @payment.cach)
+					  i +=1
+				  end
+
+			  end
+
+
+			  format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
+			  format.json { render json: @payment, status: :created, location: @payment }
+		  else
+			  format.html { render action: "new" }
+			  format.json { render json: @payment.errors, status: :unprocessable_entity }
+		  end
+	  end
   end
 
   # PUT /payments/1

@@ -1,68 +1,70 @@
 <div class="row">
-  <%= form_for(payment) do |f| %>
-      <% if payment.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+  <div class="twelve columns">
+    <fieldset>
+      <%= form_for(payment) do |f| %>
+          <% if payment.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
 
-            <ul>
-              <% payment.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>
-      <% end %>
-	 <div class="twelve columns">
-	   <div class="three columns">
-	     <%= f.label :payer_id %><br />
-	     <%= collection_select(:payment, :payer_id, Payer.all, :id, :name ) %>
-	   </div>
-	   <div class="three columns">
-	     <%= f.label "Получатель" %><br />
-	     <%= collection_select(:payment, :recipient_id, Recipient.all, :id, :name ) %>
-
-	   </div>
-	   <div class="three columns">
-	     <%= f.label :payment_date %><br />
-	     <%= f.text_field :payment_date %>
-	   </div>
-	   <div class="three columns">
-	     <%= f.label :"Периодичность" %><br />
-	     <%= collection_select(:payment, :period_id, Period.all, :id, :title ) %>
-	   </div>
-
-	 </div>
-
-
-      <div class="twelve columns">
-        <div class="six columns">
-          <%= f.label :product %><br />
-          <%= f.text_area :product %>
-        </div>
-        <div class="six columns">
-          <%= f.label :sum %><br />
-          <%= f.text_field :sum %><br />
-          <%= f.label :comment %><br />
-          <%= f.text_field :comment %><br />
-          <ul>
-           <li>
-             <%= f.label "Оплачено?" %>
-             <%= f.check_box :status %>
-           </li>
-            <li>
+                <ul>
+                  <% payment.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <div class="twelve columns">
+            <div class="three columns">
+              <%= f.label :payer_id %><br />
+              <%= collection_select(:payment, :payer_id, Payer.all, :id, :name ) %><br /><br />
+              <%= f.label :comment %>
+              <%= f.text_field :comment %>
+            </div>
+            <div class="three columns">
+              <%= f.label "Получатель" %><br />
+              <%= collection_select(:payment, :recipient_id, Recipient.all, :id, :name ) %><br /><br />
+              <%= f.label "Сумма" %>
+              <%= f.text_field :sum %>
               <%= f.label "Безнал?" %>
               <%= f.check_box :cach %>
-            </li>
-          </ul>
+            </div>
+            <div class="three columns">
+              <%= f.label "Дата первой оплаты" %><br />
+              <%= f.text_field :payment_date %>
+              <%= f.label "Кол-во повторов" %>
+              <%= f.text_field :count %>
+            </div>
+            <div class="three columns">
+              <%= f.label :"Периодичность" %><br />
+              <%= f.select :period, options_for_select([["День", "day"], ["Месяц","month"], ["Год","year"]]), :class => 'genForm_dropBox' %>
+            </div>
 
-        </div>
-
-      </div>
+          </div>
 
 
-      <div class="twelve columns">
-        <%= f.submit %>
-      </div>
-  <% end %>
+          <div class="twelve columns">
+            <div class="six columns">
+              <%= f.label :product %><br />
+              <%= f.text_area :product %>
+            </div>
+            <div class="six columns">
+
+              <%= f.fields_for :items do |builder| %>
+                  <%= render 'payments/item_fields', f: builder %>
+              <% end %>
+
+
+            </div>
+
+          </div>
+
+
+          <div class="twelve columns">
+            <%= f.submit :class=>"button nice radius" %>
+          </div>
+      <% end %>
+    </fieldset>
+  </div>
 
 </div>
 

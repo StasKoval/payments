@@ -2,19 +2,26 @@
 <div class="twelve columns">
   <nav class="top-bar">
     <ul>
-      <li><%= link_to "Календарь", payments_path  %></li>
-    <li>
-      <%= link_to 'Создать платеж', new_payment_path, :id=>"new_payment_create", "data-reveal-id" => "new_payment" %>
-    </li>
-    <li>
-      <%= link_to 'Добавить получателя',new_recipient_path, :id=>"new_recipient_create", "data-reveal-id" => "new_recipient" %>
-    </li>
-    <li>
-      <%= link_to "Безнал", :controller=>'payments', :action=>"index", :query=>'1'  %>
-    </li>
-    <li>
-      <%= link_to "Нал", :controller=>'payments', :action=>"index", :query=>'0'  %>
-    </li>
+     <% unless (current_user) %>
+        <li>
+
+        </li>
+     <% else %>
+          <li class="found"><%= link_to  "Календарь", payments_path  %></li>
+          <li>
+            <%= link_to 'Создать платеж', new_payment_path, :id=>"new_payment_create", "data-reveal-id" => "new_payment" %>
+          </li>
+          <li>
+            <%= link_to 'Добавить получателя',new_recipient_path, :id=>"new_recipient_create", "data-reveal-id" => "new_recipient" %>
+          </li>
+          <li>
+            <%= link_to "Безнал", :controller=>'payments', :action=>"index", :query=>'1'  %>
+          </li>
+          <li>
+            <%= link_to "Нал", :controller=>'payments', :action=>"index", :query=>'0'  %>
+          </li>
+     <% end %>
+
    </ul>
   </nav>
 </div>
@@ -26,3 +33,6 @@
 <div  class="reveal-modal expand"  id="new_recipient" >
   <%=render :partial => "recipients/form", :locals => {:recipient=>Recipient.new} %>
 </div>
+
+
+

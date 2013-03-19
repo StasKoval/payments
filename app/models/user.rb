@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :oauth_expires_at, :oauth_token, :provider, :uid
-  before_save :create_remember_token
+  #before_save :create_remember_token
 
   def self.from_omniauth(auth)
     find_by_provider_and_uid(auth["provider"], auth["uid"]) || create_with_omniauth(auth)
@@ -11,12 +11,9 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
+      user.email = auth["info"]["email"]
     end
   end
 
-  private
 
-  def create_remember_token
-    self.remember_token = SecureRandom.urlsafe_base64
-  end
 end

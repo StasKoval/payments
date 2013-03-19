@@ -1,0 +1,22 @@
+<style>
+.pay_true {
+background: #99FF99;
+border-color: 1px gold;
+}
+.pay_false {
+	background: #FF9900;
+	border-color: 1px gold;
+}
+</style>
+<% if f.object.status.to_s == '1' %>
+	aaaaaaaaaaaaa
+<% end %>
+
+<fieldset class="label pay_<%= f.object.status %> "  >
+    <%= f.label :date %><br />
+    <%= f.text_field :date  %><br />
+
+
+    <%= f.label "Оплачено?" %>
+    <%= f.check_box :status %>
+</fieldset>

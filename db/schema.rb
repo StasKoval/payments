@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130226141657) do
+ActiveRecord::Schema.define(:version => 20130313045942) do
 
   create_table "identities", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(:version => 20130226141657) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "items", :force => true do |t|
+    t.date     "date"
+    t.integer  "payment_id"
+    t.boolean  "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.boolean  "cach"
   end
 
   create_table "payers", :force => true do |t|
@@ -41,6 +50,8 @@ ActiveRecord::Schema.define(:version => 20130226141657) do
     t.integer  "periodic"
     t.integer  "period_id"
     t.boolean  "cach"
+    t.integer  "count"
+    t.string   "period"
   end
 
   add_index "payments", ["period_id"], :name => "index_payments_on_period_id"
@@ -69,7 +80,6 @@ ActiveRecord::Schema.define(:version => 20130226141657) do
     t.string   "email"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
-    t.string   "remember_token"
   end
 
 end

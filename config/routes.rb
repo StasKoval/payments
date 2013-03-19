@@ -1,8 +1,9 @@
 Payments::Application.routes.draw do
+
   #root to: "sessions#new"
 
   match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
+  match 'auth/failure', to: redirect('/payments')
   match 'signout', to: 'sessions#destroy', as: 'signout'
   match 'signin', to: 'sessions#new', as: 'signin'
 
@@ -19,6 +20,7 @@ Payments::Application.routes.draw do
 
   resources :payments
 
+  resources :items
 
 	resources :payments
 	root to: 'payments#index'

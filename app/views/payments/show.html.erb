@@ -11,14 +11,10 @@
   <%= @payment.recipient.name %>
 </p>
 
-<p>
-  <b>Payment date:</b>
-  <%= @payment.payment_date %>
-</p>
 
 <p>
   <b>Периодичность:</b>
-  <%= @payment.period.title %>
+  <%= @payment.period %>
 </p>
 
 <p>
@@ -26,9 +22,13 @@
   <%= @payment.product %>
 </p>
 
-<p>
-  <b>Status:</b>
-  <%= @payment.status %>
+  <p>
+    <b>Payment date:</b>
+  <ol class="items">
+    <% @payment.items.each do |item| %>
+        <li class="label <%= payment_class(item) %>"><%= item.date %> <%= item.status %></li>
+    <% end %>
+  </ol>
 </p>
 
 

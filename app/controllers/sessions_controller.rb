@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
   def new
-    #render 'identities/new'
+    render 'identities/new'
   end
 
   def create
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
-    redirect_to '/', notice: "Signed in!"
+    redirect_to '/payments', notice: "Signed in!"
   end
 
   def destroy

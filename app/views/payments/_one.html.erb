@@ -2,42 +2,37 @@
 
 <p>
   <b>Плательщик:</b>
-  <%= payment.payer.name %>
+  <%= item.payment.payer.name %>
 </p>
 
 <p>
   <b>Получатель:</b>
-  <%= payment.recipient.name %>
+  <%= item.payment.recipient.name %>
 </p>
 
 <p>
   <b>Дата оплаты:</b>
-  <%= payment.payment_date %>
-</p>
-
-<p>
-  <b>Отсрочка (дней):</b>
-  <%= payment.delay %>
+  <%= item.date %>
 </p>
 
 <p>
   <b>Товар:</b>
-  <%= payment.product %>
+  <%= item.payment.product %>
 </p>
   <p>
     <b>Cумма:</b>
-    <%= payment.sum %>
+    <%= item.payment.sum %>
   </p>
   <p>
   <b>Безнал:</b>
-    <%= payment.cach %>
+    <%= item.cach %>
   </p>
 <p>
   <b>Состояние:</b>
-  <%= payment.status %>
+  <%= item.status %>
 </p>
 
 
-<%= link_to 'Edit', edit_payment_path(payment) %> |
+<%= link_to 'Edit', edit_payment_path(item.payment) %> |
 <%= link_to 'Back', payments_path %>
 </div>

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b51c021-166c-4e30-98d7-970ac1408aeb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/nginx.conf" afterPath="$PROJECT_DIR$/config/nginx.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="payments.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +47,7 @@
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/config/unicorn.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363104954542" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/synergy_app/Gemfile" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363105983815" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/config/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363106343162" ignored="false" />
-    <file path="/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363698350754" ignored="false" />
+    <file path="/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363700731636" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/db/schema.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363108037058" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/demo/config/database.yml" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363108871338" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/demo/Gemfile" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363111521850" ignored="false" />
@@ -140,15 +142,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="payment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/payment.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="50" selection-start="73" selection-end="85" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="payments.js.coffee.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/payments.js.coffee.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -179,7 +172,16 @@
       <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="27" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.0">
+            <state line="60" column="28" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="2" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,7 +190,7 @@
       <file leaf-file-name="nginx.conf" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/nginx.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="230" selection-end="230" vertical-scroll-proportion="0.33568904">
+            <state line="24" column="2" selection-start="463" selection-end="463" vertical-scroll-proportion="0.69787985">
               <folding />
             </state>
           </provider>
@@ -248,7 +250,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
@@ -263,6 +264,7 @@
         <option value="$PROJECT_DIR$/app/views/payments/_one.html.erb" />
         <option value="$PROJECT_DIR$/app/views/payments/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/nginx.conf" />
       </list>
     </option>
@@ -373,6 +375,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1067,13 +1087,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="16" selection-start="0" selection-end="713" vertical-scroll-proportion="0.0" />
@@ -1161,14 +1174,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="27" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.0">
+        <state line="60" column="28" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="2" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="230" selection-end="230" vertical-scroll-proportion="0.33568904">
+        <state line="24" column="2" selection-start="463" selection-end="463" vertical-scroll-proportion="0.69787985">
           <folding />
         </state>
       </provider>

@@ -11,19 +11,19 @@
     </div>
   <% end %>
   <div class="field">
-      <%= f.label :name %><br />
+      <%= f.label "Название/Имя" %><br />
       <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :address %><br />
+    <%= f.label "Адрес (строка в свободном формате)" %><br />
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :contacts %><br />
+    <%= f.label "Контакты (строка в свободном формате)" %><br />
     <%= f.text_field :contacts %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Добавить", :class=>'small nice button' %>
   </div>
 <% end %>

@@ -24,12 +24,20 @@
     <%= item.payment.sum %>
   </p>
   <p>
-  <b>Безнал:</b>
-    <%= item.cach %>
+  <b>Платеж:</b>
+    <% if item.cach.to_s == 'true' %>
+        Безнал
+	<% else %>
+        Наличные
+	<% end %>
   </p>
 <p>
   <b>Состояние:</b>
-  <%= item.status %>
+  <% if item.status.to_s == 'true' %>
+      Оплачено
+  <% else %>
+      Неоплачено
+  <% end %>
 </p>
 
 

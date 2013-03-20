@@ -1,12 +1,66 @@
-<div class="row">
-  <div class="twelve columns">
-    <h2 id="month">
-      <%= link_to "<", date:@date.prev_month %>
-      <%= @date.strftime("%B %Y") %>
+<script type="text/javascript">
 
-      <%= link_to ">", date:@date.next_month %>
-    </h2>
+	function getUrlVars()
+	{
+
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+
+		for(var i = 0; i < hashes.length; i++)
+
+		{
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]] = hash[1];
+		}
+
+		return vars;
+	}
+
+	$(window).load(function(){
+		var query = getUrlVars()["query"];
+		if (!query)
+			$(':radio[name="nal"][data="3"]').attr('checked', 'checked');
+		else
+			$(':radio[name="nal"][data="'+query+'"]').attr('checked', 'checked');
+
+		$('.query').click(function(){
+			var data = $(this).attr('data');
+			if (data == 3)
+				document.location = 'payments';
+			else
+				document.location = 'payments?query='+data;
+		});
+	});
+</script>
+
+<div class="row">
+  <div class="four columns">
+    <fieldset>
+      <legend>Переключатель даты</legend>
+      <h2 id="month">
+        <%= link_to "<", date:@date.prev_month %>
+        <%= @date.strftime("%B %Y") %>
+
+        <%= link_to ">", date:@date.next_month %>
+      </h2>
+    </fieldset>
+
   </div>
+  <div class=" eight columns">
+    <fieldset>
+      <legend>Отображение</legend>
+      Общий
+      <input type="radio" checked="true" name="nal" class="query" data="3">
+      Безнал
+      <input type="radio" name="nal" class="query q1" data="1">
+      Нал
+      <input type="radio" name="nal" class="query q2" data="0">
+    </fieldset>
+
+  </div>
+
+
   <div id="payments" class="twelve columns">
 
 

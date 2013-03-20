@@ -15,9 +15,9 @@
           <% end %>
           <div class="twelve columns">
             <div class="three columns">
-              <%= f.label :payer_id %><br />
+              <%= f.label :"Плательщик" %><br />
               <%= collection_select(:payment, :payer_id, Payer.all, :id, :name ) %><br /><br />
-              <%= f.label :comment %>
+              <%= f.label :"Комментарий" %>
               <%= f.text_field :comment %>
             </div>
             <div class="three columns">
@@ -44,7 +44,7 @@
 
           <div class="twelve columns">
             <div class="six columns">
-              <%= f.label :product %><br />
+              <%= f.label "Товар/Назначение" %><br />
               <%= f.text_area :product %>
             </div>
             <div class="six columns">
@@ -60,7 +60,7 @@
 
 
           <div class="twelve columns">
-            <%= f.submit :class=>"button nice radius" %>
+            <%= f.submit "Создать", :class=>"small button nice radius" %>
           </div>
       <% end %>
     </fieldset>

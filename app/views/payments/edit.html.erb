@@ -1,14 +1,17 @@
 <div class="row">
   <div class="twelve columns">
-    <h1>Editing payment</h1>
+    <h1>Редактирование платежа</h1>
 
     <%=render :partial => "form", :locals => {:payment=>@payment} %>
 
   </div>
   <div class="twelve columns">
-     <div class="six-up columns centered">
-       <p><%= link_to 'Show', @payment %>|<%= link_to 'Back', payments_path %></p>
+     <div class="two columns">
+         <%= link_to 'Просмотр', @payment, :class=>'small button nice' %>
      </div>
+    <div class="two columns end">
+      <%= link_to 'Обратно', payments_path, :class=>'small button nice' %>
+    </div>
   </div>
 
 </div>

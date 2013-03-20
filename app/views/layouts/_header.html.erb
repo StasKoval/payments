@@ -14,12 +14,6 @@
           <li>
             <%= link_to 'Добавить получателя',new_recipient_path, :id=>"new_recipient_create", "data-reveal-id" => "new_recipient" %>
           </li>
-          <li>
-            <%= link_to "Безнал", :controller=>'payments', :action=>"index", :query=>'1'  %>
-          </li>
-          <li>
-            <%= link_to "Нал", :controller=>'payments', :action=>"index", :query=>'0'  %>
-          </li>
      <% end %>
 
    </ul>

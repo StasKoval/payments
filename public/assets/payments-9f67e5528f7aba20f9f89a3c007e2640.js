@@ -1,1 +1,0 @@
-(function(){jQuery(function(){return $("#payment_payment_date").datepicker({dateFormat:"yy-mm-dd"})}),$(" .reveral").click(function(){return $("#myModal"+product_id).reveal()})}).call(this);

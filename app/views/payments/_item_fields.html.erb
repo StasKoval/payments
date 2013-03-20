@@ -8,12 +8,10 @@ border-color: 1px gold;
 	border-color: 1px gold;
 }
 </style>
-<% if f.object.status.to_s == '1' %>
-	aaaaaaaaaaaaa
-<% end %>
+
 
 <fieldset class="label pay_<%= f.object.status %> "  >
-    <%= f.label :date %><br />
+    <%= f.label "Дата" %><br />
     <%= f.text_field :date  %><br />
 
 

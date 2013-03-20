@@ -10,11 +10,17 @@ border-color: 1px gold;
 </style>
 
 
-<fieldset class="label pay_<%= f.object.status %> "  >
+<fieldset class="label pay_<%= f.object.status %>"  style="display: inline-block">
+  <p >
     <%= f.label "Дата" %><br />
     <%= f.text_field :date  %><br />
 
-
     <%= f.label "Оплачено?" %>
     <%= f.check_box :status %>
-</fieldset>
+  </p>
+  <p style="display: inline">
+    <%= link_to 'Удалить', f.object, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"alert button small nice radius" %>
+
+  </p>
+
+  </fieldset>

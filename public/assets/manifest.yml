@@ -1,14 +1,16 @@
 ---
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-106c028337ca9ca97dd28843b8c38332.js
-application/index.js: application-106c028337ca9ca97dd28843b8c38332.js
+application.js: application-b9148ab535faa7121af506717048ffb2.js
+application/index.js: application-b9148ab535faa7121af506717048ffb2.js
 identities.js: identities-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 identities/index.js: identities-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
+items.js: items-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
+items/index.js: items-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 payers.js: payers-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 payers/index.js: payers-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
-payments.js: payments-b2d2a1de471666843ec02c387686cc15.js
-payments/index.js: payments-b2d2a1de471666843ec02c387686cc15.js
+payments.js: payments-210268f1b8527dbdd42206803db80df3.js
+payments/index.js: payments-210268f1b8527dbdd42206803db80df3.js
 periods.js: periods-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 periods/index.js: periods-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 recipients.js: recipients-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
@@ -21,6 +23,8 @@ foundation_and_overrides.css: foundation_and_overrides-7a7490b07bcf83d9e1723ca1f
 foundation_and_overrides/index.css: foundation_and_overrides-7a7490b07bcf83d9e1723ca1fbd6d818.css
 identities.css: identities-1b13569e9620782f423d4cd3ce931750.css
 identities/index.css: identities-1b13569e9620782f423d4cd3ce931750.css
+items.css: items-1b13569e9620782f423d4cd3ce931750.css
+items/index.css: items-1b13569e9620782f423d4cd3ce931750.css
 payers.css: payers-1b13569e9620782f423d4cd3ce931750.css
 payers/index.css: payers-1b13569e9620782f423d4cd3ce931750.css
 payments.css: payments-cc32df39a205c2072d9dfbc35ab89fb1.css

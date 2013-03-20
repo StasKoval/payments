@@ -26,12 +26,15 @@
     <b>Payment date:</b>
   <ol class="items">
     <% @payment.items.each do |item| %>
-        <li class="label"><%= item.date %> <%= item.status %></li>
+        <%= content_tag(:li,:style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }" )  do %>
+            <%= item.date %> <%= "#{item.status.to_s=='true'? 'оплачено':'неоплачено' }" %>
+        <% end %>
     <% end %>
   </ol>
 </p>
 
 
-<%= link_to 'Edit', edit_payment_path(@payment) %> |
-<%= link_to 'Back', payments_path %>
+<%= link_to 'Edit', edit_payment_path(@payment), :class=>"success button small nice radius" %> |
+<%= link_to 'Back', payments_path, :class=>" button small nice radius" %> |
+  <%= link_to 'Destroy', @payment, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"alert button small nice radius" %>
 </div>

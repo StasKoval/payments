@@ -1,5 +1,7 @@
 Payments::Application.routes.draw do
 
+  get "items/destroy"
+
   #root to: "sessions#new"
 
   match 'auth/:provider/callback', to: 'sessions#create'

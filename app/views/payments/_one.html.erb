@@ -42,5 +42,6 @@
 
 
 <%= link_to 'Edit', edit_payment_path(item.payment) %> |
-<%= link_to 'Back', payments_path %>
+<%= link_to 'Back', payments_path %> |
+<%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

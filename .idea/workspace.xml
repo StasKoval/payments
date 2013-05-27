@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b51c021-166c-4e30-98d7-970ac1408aeb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/payments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/payments_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/payments/_one.html.erb" afterPath="$PROJECT_DIR$/app/views/payments/_one.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/payments/show.html.erb" afterPath="$PROJECT_DIR$/app/views/payments/show.html.erb" />
     </list>
     <ignored path="payments.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +33,7 @@
     <file path="$PROJECT_DIR$/../../payments_new/newpayments/app/helpers/application_helper.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363094041380" ignored="false" />
     <file path="$PROJECT_DIR$/../../payments_new/newpayments/app/assets/javascripts/payments.js.coffee" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363094083131" ignored="false" />
     <file path="$PROJECT_DIR$/../../payments_new/newpayments/app/views/payments/show.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363094614537" ignored="false" />
-    <file path="/show.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363795669300" ignored="false" />
+    <file path="/show.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369664731185" ignored="false" />
     <file path="$PROJECT_DIR$/../../payments_new/newpayments/app/views/payments/_item_fields.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363656578181" ignored="false" />
     <file path="/_item_fields.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363796063159" ignored="false" />
     <file path="$PROJECT_DIR$/../../payments_new/newpayments/app/views/payments/index.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363148333106" ignored="false" />
@@ -47,7 +46,7 @@
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/config/unicorn.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363104954542" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/synergy_app/Gemfile" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363105983815" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/config/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363106343162" ignored="false" />
-    <file path="/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369663642256" ignored="false" />
+    <file path="/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369664392291" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/db/schema.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363108037058" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/demo/config/database.yml" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363108871338" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/demo/Gemfile" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363111521850" ignored="false" />
@@ -106,7 +105,7 @@
     <file path="$PROJECT_DIR$/../../../Forfun/newstudio/studio1/app/models/entry.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363144028623" ignored="false" />
     <file path="/entry.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363143886885" ignored="false" />
     <file path="$PROJECT_DIR$/../../payments_new/newpayments/app/assets/stylesheets/payments.css.scss" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363147357835" ignored="false" />
-    <file path="/_one.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363793736541" ignored="false" />
+    <file path="/_one.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369664877765" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Customers/Ksymax/ksymax_deploy/app/views/public_activity/comment/_create.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363630913784" ignored="false" />
     <file path="/_create.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363630874243" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/newstudio/studio/app/assets/stylesheets/scss/_settings.scss" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363202323408" ignored="false" />
@@ -128,7 +127,7 @@
     <file path="/items_controller.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363793858479" ignored="false" />
     <file path="/seeds.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369318695087" ignored="false" />
     <file path="/a.dummy" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369661577608" ignored="false" />
-    <file path="/production.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369661713215" ignored="false" />
+    <file path="/production.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369664419884" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +154,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/payments/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="19" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
+            <state line="25" column="19" selection-start="908" selection-end="908" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -188,19 +187,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="66" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.0">
+            <state line="61" column="4" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.85617596">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payments_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="payments_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/payments_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="101" selection-start="128" selection-end="128" vertical-scroll-proportion="0.17766498">
+            <state line="7" column="101" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -233,8 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/periods/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/payments/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/payments/_item_fields.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
@@ -246,9 +243,11 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/payments/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/payments/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/payments_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/payments/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/payments/_one.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/payments_controller.rb" />
       </list>
     </option>
   </component>
@@ -905,18 +904,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/payment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="48" selection-start="345" selection-end="363" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/payments/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="84" selection-start="574" selection-end="574" vertical-scroll-proportion="-13.625" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="21" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0" />
@@ -932,11 +919,6 @@
         <state line="28" column="9" selection-start="778" selection-end="778" vertical-scroll-proportion="-13.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/payments/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="81" selection-start="755" selection-end="755" vertical-scroll-proportion="-22.5" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="21" selection-start="79" selection-end="91" vertical-scroll-proportion="0.0">
@@ -946,7 +928,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/payments/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
+        <state line="25" column="19" selection-start="908" selection-end="908" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
@@ -982,6 +964,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/payments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="101" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/payments/_one.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="29" selection-start="81" selection-end="81" vertical-scroll-proportion="0.105820104">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/payments/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="118" selection-start="3119" selection-end="3132" vertical-scroll-proportion="0.33205375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/payments/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="25" selection-start="111" selection-end="111" vertical-scroll-proportion="-0.05820106">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="2" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.0">
@@ -991,14 +1001,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="66" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/payments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="101" selection-start="128" selection-end="128" vertical-scroll-proportion="0.17766498">
+        <state line="61" column="4" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.85617596">
           <folding />
         </state>
       </provider>

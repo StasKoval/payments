@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
 
   respond_to :html, :json, :js
-  before_filter :signed_in_user,
+  #before_filter :signed_in_user,
 
 
 	def index

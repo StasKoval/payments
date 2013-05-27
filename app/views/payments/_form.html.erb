@@ -15,8 +15,13 @@
           <% end %>
           <div class="twelve columns">
             <div class="three columns">
-              <%= f.label :"Плательщик" %><br />
-              <%= collection_select(:payment, :payer_id, Payer.all, :id, :name ) %><br /><br />
+              <% unless current_user.admin? %>
+
+              <% else %>
+                <%= f.label :"Плательщик" %><br />
+                <%= collection_select(:payment, :payer_id, Payer.all, :id, :name ) %><br /><br />
+              <% end %>
+
               <%= f.label :"Комментарий" %>
               <%= f.text_field :comment %>
             </div>

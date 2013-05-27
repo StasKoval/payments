@@ -1,22 +1,29 @@
 class PaymentsController < ApplicationController
-  #include SessionsHelper
+
   respond_to :html, :json, :js
 
 
 	def index
 
-    if params[:query]
-      @items = Item.where('cach=?', params[:query])
-    else
-      @items = Item.all
-    end
-    #@periodic = []
-    #@payments.each do |payment|
+    unless current_user.admin?
 
-    #end
+      if params[:query]
+        @items = Item.accessory(current_user.role).where('`items`.`cach`=?', params[:query])
+      else
+        @items = Item.accessory(current_user.role).all
+      end
+
+    else
+      if params[:query]
+        @items = Item.where('`items`.`cach`=?', params[:query])
+      else
+        @items = Item.all
+      end
+    end
+
 
     @items_by_date = @items.group_by(&:date )
-    #@payments_per_week = @payments.period.where(:value=>2)
+
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 
     respond_with(@items)
@@ -29,8 +36,7 @@ class PaymentsController < ApplicationController
     respond_with(@payment)
   end
 
-  # GET /payments/new
-  # GET /payments/new.json
+
   def new
     @payment = Payment.new
 
@@ -42,10 +48,13 @@ class PaymentsController < ApplicationController
     @payment = Payment.find(params[:id])
   end
 
-  # POST /payments
-  # POST /payments.json
+
   def create
 	  @payment = Payment.new(params[:payment])
+
+    @payment.user_id = current_user.id
+    @payment.department = current_user.role
+
 	  period = params[:payment][:period]
 
 	  respond_to do |format|
@@ -81,8 +90,7 @@ class PaymentsController < ApplicationController
 	  end
   end
 
-  # PUT /payments/1
-  # PUT /payments/1.json
+
   def update
     @payment = Payment.find(params[:id])
 
@@ -97,8 +105,7 @@ class PaymentsController < ApplicationController
     end
   end
 
-  # DELETE /payments/1
-  # DELETE /payments/1.json
+
   def destroy
     @payment = Payment.find(params[:id])
     @payment.destroy

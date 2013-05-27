@@ -71,7 +71,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rails-i18n (v0.7.2, rbenv: 1.9.3-p374-railsexpress) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.11, rbenv: 1.9.3-p374-railsexpress) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="raindrops (v0.10.0, rbenv: 1.9.3-p374-railsexpress) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.0.3, rbenv: 1.9.3-p374-railsexpress) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.0.4, rbenv: 1.9.3-p374-railsexpress) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.1, rbenv: 1.9.3-p374-railsexpress) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.5, rbenv: 1.9.3-p374-railsexpress) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, rbenv: 1.9.3-p374-railsexpress) [gem]" level="application" />

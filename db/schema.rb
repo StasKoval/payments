@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130313045942) do
+ActiveRecord::Schema.define(:version => 20130523142816) do
 
   create_table "identities", :force => true do |t|
     t.string   "name"
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(:version => 20130313045942) do
     t.boolean  "cach"
     t.integer  "count"
     t.string   "period"
+    t.integer  "user_id"
+    t.string   "department"
   end
 
   add_index "payments", ["period_id"], :name => "index_payments_on_period_id"
@@ -80,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20130313045942) do
     t.string   "email"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "role"
   end
 
 end

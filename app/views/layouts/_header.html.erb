@@ -21,6 +21,11 @@
 </div>
 </div>
 
+<div class="alert-box">
+  <%= "Вы вошли как #{current_user.email} . Дoступ \"#{current_user.role}\" "%>
+  <a href="" class="close">×</a>
+</div>
+
 <div  class="reveal-modal expand"  id="new_payment" >
   <%=render :partial => "payments/form", :locals => {:payment=>Payment.new} %>
 </div>

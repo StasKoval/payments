@@ -17,6 +17,13 @@
             <div class="three columns">
               <% if current_user %>
               <% unless current_user.admin? %>
+                <% if current_user.sky? %>
+                  <%= f.hidden_field :payer_id, :value =>'1'  %>
+                <% else %>
+                  <%= f.hidden_field :payer_id, :value =>'2'  %>
+                <% end %>
+
+
 
               <% else %>
                 <%= f.label :"Плательщик" %><br />
@@ -25,8 +32,8 @@
 
              <% end %>
 
-              <%= f.label :"Комментарий" %>
-              <%= f.text_field :comment %>
+              <%= f.label :"Товар" %>
+              <%= f.text_field :product %>
             </div>
             <div class="three columns">
               <%= f.label "Получатель" %><br />
@@ -52,8 +59,8 @@
 
           <div class="twelve columns">
             <div class="six columns">
-              <%= f.label "Товар/Назначение" %><br />
-              <%= f.text_area :product %>
+              <%= f.label "Комментарий" %><br />
+              <%= f.text_area :comment %>
             </div>
             <div class="six columns">
 

@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b51c021-166c-4e30-98d7-970ac1408aeb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/nginx.conf" afterPath="$PROJECT_DIR$/config/nginx.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
     </list>
     <ignored path="payments.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369655199584" ignored="false" />
     <file path="/index.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369321935347" ignored="false" />
     <file path="/payment.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369319869473" ignored="false" />
-    <file path="/_header.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369321717837" ignored="false" />
+    <file path="/_header.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369661346943" ignored="false" />
     <file path="/payments_controller.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369322253677" ignored="false" />
     <file path="/Gemfile" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363203036116" ignored="false" />
     <file path="/omniauth.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1361884511573" ignored="false" />
@@ -148,10 +148,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_header.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="73" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
+            <state line="28" column="9" selection-start="778" selection-end="778" vertical-scroll-proportion="0.6031746">
               <folding />
             </state>
           </provider>
@@ -211,10 +211,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nginx.conf" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="nginx.conf" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/nginx.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="2" selection-start="313" selection-end="313" vertical-scroll-proportion="0.40609136">
+            <state line="0" column="58" selection-start="18" selection-end="313" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -265,13 +265,13 @@
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/payment.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/payments/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/payments_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/payments/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/item.rb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/config/nginx.conf" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
       </list>
     </option>
   </component>
@@ -869,13 +869,6 @@
         <state line="16" column="4" selection-start="299" selection-end="299" vertical-scroll-proportion="0.433213" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="73" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="21" selection-start="393" selection-end="393" vertical-scroll-proportion="0.20304568" />
@@ -947,7 +940,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="2" selection-start="313" selection-end="313" vertical-scroll-proportion="0.40609136">
+        <state line="0" column="58" selection-start="18" selection-end="313" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="9" selection-start="778" selection-end="778" vertical-scroll-proportion="0.6031746">
           <folding />
         </state>
       </provider>

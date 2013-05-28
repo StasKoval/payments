@@ -83,7 +83,7 @@
               <% @items_by_date[date].each do |item| %>
                   <%= content_tag :li do %>
                     <%= content_tag(:span, :class=>' has-tip tip-top '  , "data-width"=>'140', "title"=>"#{item.payment.recipient.name} #{item.payment.sum}") do %>
-                    <%= link_to "#{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
+                    <%= link_to "#{item.payment.department} #{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
                     <% end %>
                   <% end %>
 	              <%= javascript_tag do %>
@@ -111,7 +111,7 @@
               <% @items_by_date[date].each do |item| %>
                   <%= content_tag :li do %>
                       <%= content_tag(:span, :class=>'has-tip tip-top', "data-width"=>'140', "title"=>"#{item.payment.recipient.name} #{item.payment.sum}") do %>
-                          <%= link_to "#{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
+                          <%= link_to "#{item.payment.department} #{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
                       <% end %>
                   <% end %>
                   <%= javascript_tag do %>

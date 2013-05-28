@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b51c021-166c-4e30-98d7-970ac1408aeb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/payments/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/payments/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/payments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/payments/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="payments.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369664082234" ignored="false" />
-    <file path="/index.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369321935347" ignored="false" />
+    <file path="/Dummy.txt" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369727390959" ignored="false" />
+    <file path="/index.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369727446060" ignored="false" />
     <file path="/payment.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369319869473" ignored="false" />
     <file path="/_header.html.erb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369661346943" ignored="false" />
     <file path="/payments_controller.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369664244482" ignored="false" />
@@ -46,7 +46,7 @@
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/config/unicorn.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363104954542" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/synergy_app/Gemfile" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363105983815" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/config/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363106343162" ignored="false" />
-    <file path="/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369665318228" ignored="false" />
+    <file path="/application.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1369727588060" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/mystore/db/schema.rb" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363108037058" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/demo/config/database.yml" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363108871338" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Forfun/demo/Gemfile" changelist="6b51c021-166c-4e30-98d7-970ac1408aeb" time="1363111521850" ignored="false" />
@@ -154,7 +154,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/payments/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="38" selection-start="2244" selection-end="2244" vertical-scroll-proportion="-21.125">
+            <state line="61" column="38" selection-start="2244" selection-end="2244" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -190,7 +190,7 @@
       <file leaf-file-name="application.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="4" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.85617596">
+            <state line="61" column="4" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.7715736">
               <folding />
             </state>
           </provider>
@@ -236,7 +236,6 @@
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/payment.rb" />
-        <option value="$PROJECT_DIR$/app/views/payments/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/item.rb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/config/nginx.conf" />
@@ -247,6 +246,7 @@
         <option value="$PROJECT_DIR$/app/views/payments/_one.html.erb" />
         <option value="$PROJECT_DIR$/app/views/payments/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/app/views/payments/index.html.erb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
@@ -315,7 +315,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -469,18 +468,19 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="TODO_SCOPE" value="Tests" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="TODO_SCOPE" value="Tests" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Resumeo/vint/resumeo" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -614,13 +614,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -654,6 +647,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
@@ -822,7 +822,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.6713178" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18085106" sideWeight="0.873065" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18389058" sideWeight="0.873065" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39791358" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17781155" sideWeight="0.31733745" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -904,11 +904,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="21" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="58" selection-start="18" selection-end="313" vertical-scroll-proportion="0.0" />
@@ -966,28 +961,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/payments/_one.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="29" selection-start="81" selection-end="81" vertical-scroll-proportion="0.105820104">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/payments/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="118" selection-start="3119" selection-end="3132" vertical-scroll-proportion="0.33205375">
-          <folding />
-        </state>
+        <state line="4" column="29" selection-start="81" selection-end="81" vertical-scroll-proportion="0.105820104" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/payments/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="111" selection-end="111" vertical-scroll-proportion="-0.05820106">
-          <folding />
-        </state>
+        <state line="5" column="25" selection-start="111" selection-end="111" vertical-scroll-proportion="-0.05820106" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/payments/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="38" selection-start="2244" selection-end="2244" vertical-scroll-proportion="-21.125">
+        <state line="61" column="38" selection-start="2244" selection-end="2244" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
@@ -999,9 +983,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/payments/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="59" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.46028882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/payments/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="4" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.85617596">
+        <state line="61" column="4" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.7715736">
           <folding />
         </state>
       </provider>

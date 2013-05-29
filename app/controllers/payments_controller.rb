@@ -6,9 +6,8 @@ class PaymentsController < ApplicationController
 
 	def index
 
-    @items = Item.accessory(params[:dep]).all
+    #@items = Item.accessory(params[:dep]).all
 
-=begin
     unless current_user.admin?
 
       if params[:query]
@@ -21,10 +20,9 @@ class PaymentsController < ApplicationController
       if params[:query]
         @items = Item.accessory(params[:dep]).where('`items`.`cach`=? ', params[:query])
       else
-        @items = Item.all
+        @items = Item.accessory(params[:dep]).all
       end
     end
-=end
 
 
     @items_by_date = @items.group_by(&:date )

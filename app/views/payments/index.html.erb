@@ -43,9 +43,11 @@
 
 			var data = $(this).attr('data');
 
-			//if (data != 3){
+			if (data != 3){
         url = 'query='+data;
-      //}
+      }else{
+        url = ''
+      }
 
       document.location ='payments?'+url+'&'+req;
 		});
@@ -101,6 +103,7 @@
           </ul>
         </div>
         <div class="four columns">
+          <% if current_user.admin? %>
           <ul class="square">
             <li>
               <label for="radio4">
@@ -122,6 +125,7 @@
             </li>
 
           </ul>
+          <% end %>
         </div>
         <div class="four columns"></div>
       </div>

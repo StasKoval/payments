@@ -1,26 +1,30 @@
 class PaymentsController < ApplicationController
 
   respond_to :html, :json, :js
-  #before_filter :signed_in_user,
+  before_filter :find_payer, :only => [:create, :edit]
 
 
 	def index
 
+    @items = Item.accessory(params[:dep]).all
+
+=begin
     unless current_user.admin?
 
       if params[:query]
-        @items = Item.accessory(current_user.role).where('`items`.`cach`=?', params[:query])
+        @items = Item.accessory(current_user.role).where('`items`.`cach`=? ', params[:query])
       else
         @items = Item.accessory(current_user.role).all
       end
 
     else
       if params[:query]
-        @items = Item.where('`items`.`cach`=?', params[:query])
+        @items = Item.accessory(params[:dep]).where('`items`.`cach`=? ', params[:query])
       else
         @items = Item.all
       end
     end
+=end
 
 
     @items_by_date = @items.group_by(&:date )
@@ -28,7 +32,7 @@ class PaymentsController < ApplicationController
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 
     respond_with(@items)
-
+    #binding.pry
   end
 
   def show
@@ -51,11 +55,13 @@ class PaymentsController < ApplicationController
 
 
   def create
+    #binding.pry
 	  @payment = Payment.new(params[:payment])
 
-    @payment.user_id = current_user.id
-    @payment.department = current_user.role
 
+    @payment.user_id = current_user.id
+    @payment.department = @payer.name
+    @payment.payer_id = @payer.id
 	  period = params[:payment][:period]
 
 	  respond_to do |format|
@@ -88,7 +94,8 @@ class PaymentsController < ApplicationController
 			  format.html { render action: "new" }
 			  format.json { render json: @payment.errors, status: :unprocessable_entity }
 		  end
-	  end
+    end
+    #binding.pry
   end
 
 
@@ -116,4 +123,10 @@ class PaymentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def find_payer
+    @payer = Payer.find(params['payment']['payer_id'])
+    #binding.pry
+  end
+
 end

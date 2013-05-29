@@ -45,6 +45,9 @@ group :test, :development do #в группу для разработки и т�
 	gem 'better_errors'
 	gem 'binding_of_caller'
 	gem 'meta_request'
+  gem 'pry'
 end
 gem 'bcrypt-ruby'
+gem 'omniauth'
+gem 'devise'
 gem 'omniauth-identity'

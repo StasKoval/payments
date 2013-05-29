@@ -21,18 +21,48 @@
 
 	$(window).load(function(){
 		var query = getUrlVars()["query"];
-		if (!query)
-			$(':radio[name="nal"][data="3"]').attr('checked', 'checked');
-		else
-			$(':radio[name="nal"][data="'+query+'"]').attr('checked', 'checked');
+    var dep = getUrlVars()["dep"];
+    var url = '';
+    var req = '';
+
+    if (!query){
+      $(':radio[name="nal"][data="3"]').attr('checked', 'checked');
+    }else{
+      $(':radio[name="nal"][data="'+query+'"]').attr('checked', 'checked');
+      url = 'query='+query;
+    }
+
+    if (!dep){
+      $(':radio[name="dep"][data="all"]').attr('checked', 'checked');
+    }else{
+      $(':radio[name="dep"][data="'+dep+'"]').attr('checked', 'checked');
+      req = 'dep='+dep
+    }
 
 		$('.query').click(function(){
+
 			var data = $(this).attr('data');
-			if (data == 3)
-				document.location = 'payments';
-			else
-				document.location = 'payments?query='+data;
+
+			//if (data != 3){
+        url = 'query='+data;
+      //}
+
+      document.location ='payments?'+url+'&'+req;
 		});
+
+    $(" .dep").click(function() {
+      var chek = $(this).attr('data');
+
+
+      if(chek != 'all'){
+          req = 'dep='+chek
+      }else{
+        req = ''
+      }
+      document.location ='payments?'+url+'&'+req;
+    });
+
+
 	});
 </script>
 
@@ -52,24 +82,50 @@
   <div class=" eight columns">
     <fieldset>
       <legend>Фильтр</legend>
-      <ul class="circle">
-        <li>
-          Общий
-          <input type="radio" checked="true" name="nal" class="query" data="3">
-        </li>
-        <li>
-          Безнал
-          <input type="radio" name="nal" class="query q1" data="1">
-        </li>
-        <li>
-          Нал
-          <input type="radio" name="nal" class="query q2" data="0">
-        </li>
+      <div class="row">
+        <div class="four columns">
+          <ul class="square">
+            <li>
+              Общий
+              <input type="radio" checked="true" name="nal" class="query" data="3">
+            </li>
+            <li>
+              Безнал
+              <input type="radio" name="nal" class="query q1" data="1">
+            </li>
+            <li>
+              Нал
+              <input type="radio" name="nal" class="query q2" data="0">
+            </li>
 
-      </ul>
+          </ul>
+        </div>
+        <div class="four columns">
+          <ul class="square">
+            <li>
+              <label for="radio4">
+                <input name="dep" type="radio" id="radio4" class="dep" data='all'>
+               ALL
+              </label>
+            </li>
+            <li>
+              <label for="radio5">
+                <input name="dep" type="radio" id="radio5" class="dep" data='icn'>
+                ICN
+              </label>
+            </li>
+            <li>
+              <label for="radio6">
+                <input name="dep" type="radio" id="radio6" class="dep" data='sky'>
+                SKY
+              </label>
+            </li>
 
+          </ul>
+        </div>
+        <div class="four columns"></div>
+      </div>
     </fieldset>
-
   </div>
 
 
@@ -83,7 +139,7 @@
               <% @items_by_date[date].each do |item| %>
                   <%= content_tag :li do %>
                     <%= content_tag(:span, :class=>' has-tip tip-top '  , "data-width"=>'140', "title"=>"#{item.payment.recipient.name} #{item.payment.sum}") do %>
-                    <%= link_to "#{item.payment.department} #{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
+                    <%= link_to "#{item.payment.payer.name} #{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
                     <% end %>
                   <% end %>
 	              <%= javascript_tag do %>
@@ -111,7 +167,7 @@
               <% @items_by_date[date].each do |item| %>
                   <%= content_tag :li do %>
                       <%= content_tag(:span, :class=>'has-tip tip-top', "data-width"=>'140', "title"=>"#{item.payment.recipient.name} #{item.payment.sum}") do %>
-                          <%= link_to "#{item.payment.department} #{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
+                          <%= link_to "#{item.payment.payer.name} #{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
                       <% end %>
                   <% end %>
                   <%= javascript_tag do %>
@@ -138,7 +194,7 @@
               <% @items_by_date[date].each do |item| %>
                   <%= content_tag :li do %>
                       <%= content_tag(:span, :class=>'has-tip tip-top', "data-width"=>'140', "title"=>"#{item.payment.recipient.name} #{item.payment.sum}") do %>
-                          <%= link_to "#{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
+                          <%= link_to "#{item.payment.payer.name} #{item.payment.recipient.name} #{item.payment.sum}", item, :style=>'color:' "#{item.status.to_s=='true'? 'green':'red' }", "data-reveal-id" => "myModal"+item.payment.id.to_s, :class =>"reveral" %>
                       <% end %>
                   <% end %>
                   <%= javascript_tag do %>

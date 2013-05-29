@@ -124,7 +124,7 @@ class PaymentsController < ApplicationController
 
   def find_payer
     @payer = Payer.find(params['payment']['payer_id'])
-    binding.pry
+    #binding.pry
   end
 
 end

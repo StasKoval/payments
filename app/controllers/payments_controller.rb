@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
 
   respond_to :html, :json, :js
-  before_filter :find_payer, :only => [:create, :edit]
+  before_filter :find_payer, :only => [:create]
 
 
 	def index
@@ -124,7 +124,7 @@ class PaymentsController < ApplicationController
 
   def find_payer
     @payer = Payer.find(params['payment']['payer_id'])
-    #binding.pry
+    binding.pry
   end
 
 end
